@@ -11,14 +11,15 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [14.18.0]
+        yarn-version: [3.0.1]
 
     name: 🚀 Lint
     timeout-minutes: 15
 
     steps:
       - name: 👍 Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: 📥 Install Dependencies
         run: yarn install
