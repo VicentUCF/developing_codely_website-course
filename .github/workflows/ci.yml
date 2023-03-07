@@ -9,6 +9,10 @@ defaults:
 jobs:
   lint:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+
     name: 🚀 Lint
     timeout-minutes: 15
 
